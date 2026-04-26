@@ -1,0 +1,34 @@
+VLAN NETWORKS
+VLAN 10 (STAFF)  → 10.0.10.0/24
+VLAN 20 (IT)     → 10.0.20.0/24
+VLAN 30 (GUEST)  → 10.0.30.0/24
+
+GATEWAY RULE
+VLAN 10 → 10.0.10.1 (MLS1)
+VLAN 20 → 10.0.20.1 (MLS1)
+VLAN 30 → 10.0.30.1 (MLS1)
+
+DEVICE IP ASSIGNMENTS
+
+VLAN 20 (IT - Server lives here)
+Server (DHCP/DNS) → 10.0.20.10
+Subnet Mask       → 255.255.255.0
+Default Gateway   → 10.0.20.1
+DNS               → 10.0.20.10
+
+- Secure
+- Not exposed to guests
+- Central services belong here
+
+vlan 10 (staff PCs)
+PC1 → DHCP (example: 10.0.10.11)
+PC2 → DHCP (example: 10.0.10.12)
+Gateway → 10.0.10.1
+DNS     → 10.0.20.10
+
+VLAN 30 (Guest WiFi)
+Smartphonehone → DHCP (example: 10.0.30.11)
+Tablet → DHCP (example: 10.0.30.12)
+Gateway → 10.0.30.1
+DNS     → 10.0.20.10
+

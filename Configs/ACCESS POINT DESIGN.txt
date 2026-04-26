@@ -1,0 +1,20 @@
+Access Point Design
+Key Idea
+
+AP is just a bridge:
+Wired → Switch (VLAN 30)
+Wireless → Clients
+
+AP Connection
+Plug AP into SW1 access port
+Assign that port to;
+switchport mode access
+switchport access vlan 30
+
+AP Settings (Packet Tracer GUI)
+SSID: isi22
+Security: WPA2-PSK
+Password: isiphile22
+
+No IP config needed (it uses DHCP)
+

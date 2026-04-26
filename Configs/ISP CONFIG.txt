@@ -1,0 +1,21 @@
+enable
+configure terminal
+hostname ISP
+
+interface gigabitEthernet0/0
+ip address 192.168.0.1 255.255.255.252
+no shutdown
+
+interface gigabitEthernet0/1
+ip address 192.168.0.5 255.255.255.252
+no shutdown
+
+ip route 0.0.0.0 0.0.0.0 null0
+
+router bgp 65000
+neighbor 192.168.0.2 remote-as 65001
+neighbor 192.168.0.6 remote-as 65001
+network 0.0.0.0
+
+end
+write memory

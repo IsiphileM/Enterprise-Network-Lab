@@ -1,0 +1,30 @@
+enable
+configure terminal
+hostname R1
+
+interface gigabitEthernet0/0
+ip address 10.0.0.9 255.255.255.252
+no shutdown
+
+interface gigabitEthernet0/1
+ip address 192.168.0.2 255.255.255.252
+no shutdown
+
+interface gigabitEthernet0/2
+ip address 10.0.0.2 255.255.255.252
+no shutdown
+
+router ospf 1
+network 10.0.0.0 0.0.0.255 area 0
+default-information originate
+
+router bgp 65001
+neighbor 192.168.0.1 remote-as 65000
+neighbor 10.0.0.10 remote-as 65001
+neighbor 10.0.0.10 update-source gigabitEthernet0/0
+network 10.0.10.0 mask 255.255.255.0
+network 10.0.20.0 mask 255.255.255.0
+network 10.0.30.0 mask 255.255.255.0
+
+end
+write memory
