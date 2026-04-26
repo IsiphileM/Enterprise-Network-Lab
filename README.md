@@ -30,8 +30,8 @@ The network follows a hierarchical model consisting of:
 * **Infrastructure Services:** DHCP/DNS Server
 * **Wireless Access:** Access Point for guest devices
 
-![Network Topology](./PacketTracerTopology.png)
-![Network Diagram - draw.io](./NetworkDiagram.png)
+![Network Topology](./Diagrams/PacketTracerTopology.png)
+![Network Diagram - draw.io](./Diagrams/NetworkDiagram.png)
 
 
 ---
