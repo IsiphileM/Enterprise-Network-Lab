@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+
+# Packet Tracer autosaves
+*.pkt.bak
+
+# Editor files
+.vscode/
+.idea/
+
+# Mac system files
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Desktop.ini
+
+# Python (if you ever add scripts later)
+__pycache__/
+*.pyc
